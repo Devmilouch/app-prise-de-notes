@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import DisplayNote from "./Components/DisplayNote/DisplayNote";
+import ListNotes from "./Components/ListNotes/ListNotes";
+import MainArea from "./Components/MainArea/MainArea";
+import Sidebar from "./Components/Sidebar/Sidebar";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<ListNotes />} />
+        <Route path="/edit" element={<MainArea />} />
+        <Route path="/displayNote/:id" element={<DisplayNote />} />
+        <Route path="/configuration" element={<div className="container-content"><h2>Panneau de configuration (non fonctionnel)</h2></div>} />
+      </Routes>
+    </>
   );
 }
 
