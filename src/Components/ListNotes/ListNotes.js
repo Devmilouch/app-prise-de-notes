@@ -21,7 +21,7 @@ const ListNotes = (props) => {
             <ul className="notes-list-card">
                 {notes &&
                     notes.map(note => (
-                        <Link key={note.id} to={`/displayNote/${note.title}`}>
+                        <Link key={note.id} to={`/displayNote/${note.title.split(" ").join("-")}`}>
                             <li>
                                 <h2>{note.title}</h2>
                                 <p>{note.subtitle}</p>
