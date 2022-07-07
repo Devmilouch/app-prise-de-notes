@@ -26,10 +26,17 @@
   hyphens: auto;
 }
 
+.txt-display {
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
 @media screen and (max-width: 900px){
     .display-txt-zone {
         width:100%;
         margin-left: 0px;
+        margin-top: 60px;
     }
     .container-txt-zone h2 {
     
@@ -41,21 +48,4 @@
         margin: 20px auto;
     }
     
-}
-
-@media screen and (max-width: 900px){
-  .display-txt-zone {
-      width:100%;
-      margin-left: 0px;
-  }
-  .container-txt-zone h2 {
-  
-      font-size: 27px;
-  }
-  .container-txt-zone button {
-
-      display: block;
-      margin: 20px auto;
-  }
-  
 }

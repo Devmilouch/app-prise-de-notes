@@ -33,7 +33,7 @@ const Sidebar = (props) => {
     return (
         <>
             {
-                checkWidth < 900 && (
+                checkWidth <= 900 && (
                     <button 
                     className="toggle-nav-btn"
                     onClick={handleToggleNav}
